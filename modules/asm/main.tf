@@ -37,7 +37,7 @@ module "asm_install" {
   skip_download                     = var.skip_gcloud_download
   upgrade                           = true
   use_tf_google_credentials_env_var = var.use_tf_google_credentials_env_var
-  additional_components             = ["kubectl", "kpt"]
+  additional_components             = ["kubectl", "kpt", "beta"]
 
   create_cmd_entrypoint  = "${path.module}/scripts/install_asm.sh"
   create_cmd_body        = "${var.project_id} ${var.cluster_name} ${var.location}"
